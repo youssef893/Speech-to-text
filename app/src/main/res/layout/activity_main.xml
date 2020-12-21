@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d5e2ea"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eef3f6"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ai"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_above="@id/speech"
+        android:contentDescription="@string/speech_to_text"
+        android:src="@drawable/speech_to_text" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speech_to_text"
+        android:layout_centerVertical="true"
+        android:id="@+id/speech"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="#546c84"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_file"
+        android:textStyle="bold"
+        android:textColor="#546c84"
+        android:background="#d5e2ea"
+        android:layout_below="@id/speech"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:onClick="create"
+        android:padding="10dp"
+        />
+
+</RelativeLayout>

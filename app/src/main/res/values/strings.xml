@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Speech to text</string>
+    <string name="close">close</string>
+    <string name="open">open</string>
+    <string name="speech_to_text">Speech to text</string>
+    <string name="create_new_file">Create new file</string>
+    <string name="file_name">File name</string>
+    <string name="save">Save</string>
+    <string name="english">English</string>
+</resources>

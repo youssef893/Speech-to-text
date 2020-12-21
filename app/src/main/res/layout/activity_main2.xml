@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:background="#eef3f6"
+    tools:context=".Main2Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_above="@+id/languageName"
+            android:layout_alignParentTop="true"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/word"
+                android:inputType="textMultiLine"
+                 />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/english"
+            android:textStyle="bold"
+            android:id="@+id/languageName"
+            android:textColor="#546c84"
+            android:layout_above="@id/speak"
+            android:layout_centerHorizontal="true"
+             />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/speak"
+            android:id="@+id/language"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/languagepic"
+            android:onClick="changeLanguageBtn"
+             />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/speak"
+            android:id="@+id/cam"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/camera"
+
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/speak"
+            android:background="@drawable/mic"
+            android:onClick="speak"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#546c84"
+        app:itemIconTint="#d5e2ea"
+        android:id="@+id/menu"
+        app:itemTextColor="#d5e2ea"
+        android:layout_marginStart="20dp"
+        app:menu="@menu/menu"
+        android:layout_gravity="start"
+        >
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
